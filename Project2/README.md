@@ -22,7 +22,7 @@ Note: All the code for this project will be provided seperately
 
 DB was downloaded from [this link](https://docs.google.com/document/d/e/2PACX-1vTlVmknRRnfy_4eTrjw5hYGaiQim5ctr9naaRd4V9du2B5bxpd8FEH3KtDgp8qVekw7Cj1GLk1IXdZi/pub?embedded=True) and examined using [DB Browser](https://sqlitebrowser.org/).
 
-![Project2%20Soccer%20database%20analysis/dbbrowser.png](Project2%20Soccer%20database%20analysis/dbbrowser.png)
+![Project2%20Soccer%20database%20analysis/dbbrowser.png](images/dbbrowser.png)
 
 ## Convert Tables to CSV files
 
@@ -61,13 +61,13 @@ Steps taken for each of 3 dataframes:
 
 First we compare his overall performance metric between 2007 and 2015
 
-![Project2%20Soccer%20database%20analysis/Untitled.png](Project2%20Soccer%20database%20analysis/Untitled.png)
+![Project2%20Soccer%20database%20analysis/Untitled.png](images/Untitled.png)
 
 As expected the average overall_rating per year of Lionel Messi has improved by 9.2%
 
 Second We compare his physical performance over the years (like jumping, sprinting,...)
 
-![Project2%20Soccer%20database%20analysis/Untitled%201.png](Project2%20Soccer%20database%20analysis/Untitled%201.png)
+![Project2%20Soccer%20database%20analysis/Untitled%201.png](images/Untitled%201.png)
 
 Acceleration and sprint_speed: Since Messi is relatively short and fit, his acceleration is an important key factor which depends on small periods of top speed, unlike sprint speed which decreases with aging.
 
@@ -79,7 +79,7 @@ Shot power: Shot power has decreased and was stable from 2009 since his playstyl
 
 Accuracy measuring
 
-![Project2%20Soccer%20database%20analysis/Untitled%202.png](Project2%20Soccer%20database%20analysis/Untitled%202.png)
+![Project2%20Soccer%20database%20analysis/Untitled%202.png](images/Untitled%202.png)
 
 Free kick accuracy: Free kick accuracy improved over the years, reaching its highest in 2015
 
@@ -87,7 +87,7 @@ Heading accuracy: Like overall performance, heading accuracy improved to reach i
 
 ### Question 2: Who is better, left-footed or right-footed players?
 
-![Project2%20Soccer%20database%20analysis/Untitled%203.png](Project2%20Soccer%20database%20analysis/Untitled%203.png)
+![Project2%20Soccer%20database%20analysis/Untitled%203.png](images/Untitled%203.png)
 
 According to the previous plot, the left-footed average players overall rating between 2007 and 2015 is slightly better (by ~0.03).
 
@@ -95,21 +95,21 @@ According to the previous plot, the left-footed average players overall rating b
 
 First we plot the number of wins per home team:
 
-![Project2%20Soccer%20database%20analysis/Untitled%204.png](Project2%20Soccer%20database%20analysis/Untitled%204.png)
+![Project2%20Soccer%20database%20analysis/Untitled%204.png](images/Untitled%204.png)
 
 then we plot the number of wins per away team:
 
-![Project2%20Soccer%20database%20analysis/Untitled%205.png](Project2%20Soccer%20database%20analysis/Untitled%205.png)
+![Project2%20Soccer%20database%20analysis/Untitled%205.png](images/Untitled%205.png)
 
 After we determine the most winners we plot them: 
 
-![Project2%20Soccer%20database%20analysis/Untitled%206.png](Project2%20Soccer%20database%20analysis/Untitled%206.png)
+![Project2%20Soccer%20database%20analysis/Untitled%206.png](images/Untitled%206.png)
 
 The best results in the 2012/2013 season occur in the premier league where the home team with the most wins is **Real Madrid CF** with 17 wins and the away team with the most wins is **FC Bayern Munich** with 15 wins.
 
 ### Question 4: Which league has the most goals in the 2012/2013 season ?
 
-![Project2%20Soccer%20database%20analysis/Untitled%207.png](Project2%20Soccer%20database%20analysis/Untitled%207.png)
+![Project2%20Soccer%20database%20analysis/Untitled%207.png](images/Untitled%207.png)
 
 After plotting match goals grouped by league we can see that England's **Premier League** has the most goals (1054 goals)
 
