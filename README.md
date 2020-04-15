@@ -22,7 +22,7 @@ For this project, I decided to use the [soccer database](https://www.kaggle.com/
 teams from several European countries from 2008 to 2016. I want to explore
 and discover the important factors for Elite players and most winning teams,
 as well as players and team progressions over the years.
-<p align='center'> <img src='Project2/screenshots/Screenshot 2020-04-14 10:35:26.png'> </p>
+<p align='center'> <img src='Project2/images/Screenshot 2020-04-14 10:35:26.png'> </p>
 
 Gained skills:
   - Handling different dataset format (**sqlite** database converted to csv)
