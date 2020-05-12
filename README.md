@@ -28,3 +28,16 @@ Gained skills:
   - Handling different dataset format (**sqlite** database converted to csv)
   - Working on csv files using **Pandas/Numpy**
   - Data Visualization using **Matplotlib/seaborn**
+
+## Project3: Analyze A/B test results
+
+Perform A/B test and analyze results to help a company decide between a new developed page and an old one for their e-commerce website. 
+<p align='center'> <img src='Project3/images/ab.png'> </p>
+
+Gained skills:
+  - Practical statistics including:
+    - Probability/Conditional Probability/Bayes Rule/Normal distribution theory/Sampling distributions and central limit theorem
+    - Confidence Intervals/ Hypothesis Testing
+  - Regression:
+    - Linear/Logistic Regression
+  - Difference between Hypothesis testing and Regression models
