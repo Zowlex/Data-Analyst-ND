@@ -104,12 +104,13 @@ same for global data
 1. Average temperatures in Tunis are 2.2 times higher than global temperatures given that our country's climate is mediterranean with warm/dry summers and cold/mild winters
 2. The world seems to get hotter with each year which proves the term 'global warming' given that the average global temperature is 1.12 higher from the past two and half centuries.
 3. The local and global temperatures seem to be strongly correlated (0.47), which is logical (unless we live on another planet!). Also, this means we can estimate local temperatures based on global ones.
-
+    ```
     global_data.corrwith(local_data['avg_temp'])
-    # > avg_temp       0.470518
+    # > avg_temp       0.470518 
+    ```
 
 4. There was a noticeable global and local temperature drop around the 1800s, I googled it and it turned out to be the [Little Ice Age](https://en.wikipedia.org/wiki/Little_Ice_Age) period where the earth has seen a period of cooling due to various factors like cyclical lows in solar radiation, heightened volcanic activity, changes in the ocean circulation, variations in Earth's orbit, etc... I hope that this phenomenon repeats itself again.
 
 ## Conclusion
 
-The global warming is real and it doesn't matter which city we live in since the global temperatures is rising and it is strongly correlated with local temperatures. One must think about his small actions that might have a butterfly effect and encourage eco-friendly products.
+The global warming is real and it doesn't matter which city we live in since the global temperatures are rising and it is strongly correlated with local temperatures. One must think about his small actions that might have a butterfly effect and encourage eco-friendly products.
