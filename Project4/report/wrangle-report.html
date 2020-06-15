@@ -13079,7 +13079,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Data-wrangling-report">Data wrangling report<a class="anchor-link" href="#Data-wrangling-report">&#182;</a></h1><hr>
 
-<p><strong>May 28, 2020</strong></p>
+<p><strong>May 30, 2020</strong></p>
 
 </div>
 </div>
@@ -13087,7 +13087,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Overview:">Overview:<a class="anchor-link" href="#Overview:">&#182;</a></h2><ul>
+<h2 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
 <li>Wrangling of the WeRateDogs dataset from the tweet archive of twitter user @dog_rates was made of 4+1 steps which will be discussed individually.</li>
 </ul>
 
@@ -13105,14 +13112,14 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Data gathering for this project was challenging, we were asked to gather data from 3 different sources using 3 different methods.</p>
-<p>First, I manually downloaded the WeRateDogs twitter archive file provided by instructors: <code>twitter-archive-enhanced.csv</code>.</p>
-<p>Then, I downloaded programmatically the tweet image predictions file <code>image-predictions.tsv</code> from this <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv">url</a> using the <strong>requests</strong> library and stored it locally as a tsv file. All of this was wrapped in a single function <code>get_file(url)</code>.</p>
-<p>Finally, I Scraped likes, retweet counts and additional data for each tweet_id present in the tweet archive above using Tweepy and this was totally new for me and was made in various steps (All of the steps were perfectly provided in section4 of the project page):</p>
+<p>First, I manually downloaded the WeRateDogs twitter archive file provided by instructors: <code>twitter-archive-enhanced.csv</code> .</p>
+<p>Then, I downloaded programmatically the tweet image predictions file <code>image-predictions.tsv</code> from this <a href="https://d17h27t6h515a5.cloudfront.net/topher/2017/August/599fd2ad_image-predictions/image-predictions.tsv">url</a> using the <strong>requests</strong> library and stored it locally as a tsv file. All of this was wrapped in a single function get_file(url).</p>
+<p>Finally, I Scraped likes, retweet counts and additional data for each <em>tweet_id</em> present in the tweet archive above using Tweepy and this was totally new for me and was made in various steps (All of the steps were perfectly provided in section4 of the project page):</p>
 <ol>
-<li>I created a twitter developer account, and submitted an application to access the twitter api as a student. </li>
+<li>I created a twitter developer account, and submitted an application to access the twitter api as a student.</li>
 <li>I requested my API key and secret token and stored them as environment variables for security reasons.</li>
-<li>For each tweet_id present in <code>twitter-archive-enhanced.csv</code> file I scraped its entire JSON data and saved it as a txt file <code>tweet_json.txt</code></li>
-<li>From the file <code>tweet_json.txt</code> I extracted each tweet's favorite_count and retweet_count and stored it in a pandas dataframe <code>tweet_json_df</code> and then saved it as a csv file <code>tweet_extra.csv</code></li>
+<li>For each tweet_id present in <code>twitter-archive-enhanced.csv</code> file I scraped its entire JSON data and saved it as a txt file <code>tweet_json.txt</code>.</li>
+<li>From the file <code>tweet_json.txt</code> I extracted each tweet's <em>favorite_count</em> and <em>retweet_count</em> and stored it in a pandas dataframe tweet_json_df and then saved it as a csv file <code>tweet_extra.csv</code></li>
 </ol>
 <p>As a result, we ended up with 3 different files to work on:</p>
 <ul>
@@ -13134,7 +13141,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For data Assessment, we went through each file and assessed it visually and programmatically using pandas and its different functions (.describe(), .isnull(), .apply(), etc...) .I spotted <strong>9 quality</strong> problems and <strong>3 tidiness</strong> problems.</p>
+<p>For data Assessment, we went through each file and assessed it visually (.head(), .info(), etc...) and programmatically using pandas and its different functions (.describe(), .isnull(), .apply(), etc...) .I spotted <strong>10 quality problems</strong> and <strong>3 tidiness problems.</strong></p>
 
 </div>
 </div>
@@ -13149,7 +13156,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>For data cleaning, I read the 3 csv files and made copies with prefix <em>_clean</em> to work on and/or go back to this step if something didn't go right. Then I <strong>defined</strong> each table's problems, then <strong>cleaned</strong> each problem individually and <strong>tested</strong> it in the test section. After, cleaning each table individually I merged them by <code>tweet_id</code> as a single dataframe <code>tweet_arch_clean</code></p>
+<p>For data cleaning, I read the 3 csv files and made copies with prefix _clean to work on and/or go back to this step if something didn't go right. Then I <strong>defined</strong>, <strong>cleaned</strong> and <strong>tested</strong> each table's problems individually. After, cleaning tables I <strong>merged</strong> them by tweet_id as a single dataframe tweet_arch_clean.</p>
 
 </div>
 </div>
@@ -13164,9 +13171,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>While cleaning data I noticed that a large portion of the dataset's names and dog stages were missing. I couldn't do anything about missing names but for the missing dog stages (1724 missing entries) I tried to <strong>predict the missing values</strong>. I split the data into <strong>train</strong> (where the dog stages are not missing) and <strong>test</strong> (where dog_stage is missing) and set up a classifier (this a <strong>multiclass classification problem</strong> because we are trying to predict each dog's dog stage which could be pupper, puppo, floof or doggo).</p>
-<p>I used a <strong>catboost</strong> classifier with <strong>raw features</strong> and was able to predict the dog stage with <strong>~70% accuracy</strong>.</p>
-<p>N.B: This step was a personal effort and a mini challenge otherwise I could've left missing dog stages as None or dropped them from the dataframe.</p>
+<p>While cleaning data I noticed that a large portion of the dataset's names and dog stages were missing. I couldn't do anything about missing names but for the missing dog stages (1665 missing entries) I tried to <strong>predict the missing values</strong>.First, I noticed a huge class imbalance so I oversampled my dataset using <strong>imblearn</strong> library, then I split the data into <strong>train</strong> (where the dog stages are not missing) and <strong>test</strong> (where dog_stage is missing) and set up a classifier (this a multiclass classification problem because we are trying to predict each dog's dog stage which could be pupper, puppo, floof, etc...).</p>
+<p>I used a <strong>lightgbm</strong> classifier without parameter tuning nor extra feature engineering and was able to predict the dog stage with <strong>~90% accuracy</strong>.</p>
+<p><strong>N.B:</strong> This step was a personal effort and a mini challenge otherwise I could've left missing dog stages as None or dropped them from the dataframe.</p>
 
 </div>
 </div>
@@ -13181,8 +13188,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The final step of data wrangling is to store the clean file(s), it was made using two different methods. First, I wrote the clean dataframe <code>tweet_arch_clean</code> to a csv file <code>twitter_archive_master.csv</code>.
-Then, I stored the clean dataframe <code>tweet_arch_clean</code> as a SQLite database <code>twitter_archive.db</code> file using <strong>sqlalchemy</strong> library.</p>
+<p>The final step of data wrangling is to store the clean file(s), it was made using two different methods. First, I wrote the clean dataframe tweet_arch_clean to a csv file <code>twitter_archive_master.csv</code>. Then, I stored the clean dataframe tweet_arch_clean as a SQLite database <code>twitter_archive.db</code> file using <strong>sqlalchemy</strong> library.</p>
 
 </div>
 </div>
