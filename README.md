@@ -1,16 +1,9 @@
 # Data Analyst Nanodegree projects (status: ongoing)
 
-Data Analysis process overview for all projects:
-  - Ask Questions
-  - Data Wrangling
-  - EDA (Exploratory Data Analysis)
-  - Conclusions/predictions
-  - Communicating Results
-
 ## Project1: Explore weather trends
 
 In this project, we're asked to analyze local and global temperature data and compare the temperature trends where I live (Tunis, Tunisia) to overall global temperature trends.
-<p align='center'> <img src='Project1/Project Explore weather trends/Untitled 1.png'> </p>
+
 
 Gained skills:
   - Working on csv files using **Pandas/Numpy**
@@ -22,7 +15,6 @@ For this project, I decided to use the [soccer database](https://www.kaggle.com/
 teams from several European countries from 2008 to 2016. I want to explore
 and discover the important factors for Elite players and most winning teams,
 as well as players and team progressions over the years.
-<p align='center'> <img src='Project2/images/Screenshot 2020-04-14 10:35:26.png'> </p>
 
 Gained skills:
   - Handling different dataset format (**sqlite** database converted to csv)
@@ -32,7 +24,6 @@ Gained skills:
 ## Project3: Analyze A/B test results
 
 Perform A/B test and analyze results to help a company decide between a new developed page and an old one for their e-commerce website. 
-<p align='center'> <img src='Project3/images/ab.png'> </p>
 
 Gained skills:
   - Practical statistics including:
@@ -41,3 +32,17 @@ Gained skills:
   - Regression:
     - Linear/Logistic Regression
   - Difference between Hypothesis testing and Regression models
+  
+## Project4: "WeRateDogs" twitter dataset wrangling 
+
+Wrangle and Analyze the [WeRateDogs](https://en.wikipedia.org/wiki/WeRateDogs) dataset from the tweet archive of twitter user [@dog_rates](https://twitter.com/dog_rates)
+
+This project is divided into several steps:
+  
+  - Data wrangling: check [wrangle_report](Project4/report) for more details
+  - Data analysis: check [act_report](Project4/report) for more details
+
+
+Gained skills:
+  - setup twitter developer account and scrape data using twitter's API
+  - Data scraping from different sources
