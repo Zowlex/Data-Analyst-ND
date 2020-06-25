@@ -1,4 +1,4 @@
-# Data Analyst Nanodegree projects (status: graduated 25/07/2020)
+# Data Analyst Nanodegree projects (status: graduated 25/06/2020)
 
 ## Project1: Explore weather trends
 
