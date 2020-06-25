@@ -46,3 +46,18 @@ This project is divided into several steps:
 Gained skills:
   - setup twitter developer account and scrape data using twitter's API
   - Data scraping from different sources
+  
+## Project5: "Fatal police shootings in Us" dataset visualization 
+
+Wrangle,analyze and communicate findings of the [Fatal police shootings in the US](https://www.kaggle.com/kwullum/fatal-police-shootings-in-the-us) dataset from kaggle.
+
+This project is divided into several steps:
+  
+  - Data analysis: check [exploration.html](Project5/report) for more details
+  - Communicate findings : check [exploration-part2.html]
+  - Tell a story: check [exploration-part2.slides.html]
+
+
+Gained skills:
+  - Learned to apply sound design and data visualization principles to the data analysis process
+  - Learned how to use analysis and visualizations to tell a story with data
